@@ -1,7 +1,8 @@
 ## 为什么要学习flex
 
 1.flex是什么？  
-	其实flex也只是一种布局方式而已，和float布局，position布局一样，服务于前端开发的css。
+
+flex是Flexible Box的简称，指`弹性布局`其实flex也只是一种布局方式而已，和float布局，position布局一样，服务于前端开发的css。
 
 * flex是一种基于盒模型的布局方式，与传统布局有着天壤的差别；
 * flex为移动端布局而生；
@@ -29,7 +30,8 @@
  
  所以flex兼容性写法也很简单，加上 *浏览器前缀* 即可。  
  
- `.flex-box-demo {
+ ```css
+ .flex-box-demo {
  		display: -ms-flexbox;	 
 		display: -webkit-flex;  
 		display: flex;
@@ -38,7 +40,7 @@
 		-ms-flex-wrap: wrap;
 		-o-flex-wrap: wrap;
 		flex-wrap: wrap;
- }`
+ }```
  
 
  
