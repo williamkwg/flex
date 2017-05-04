@@ -39,13 +39,22 @@
             line-height: 30px;
             background: #f5f5f5;
         }
-        .listDemo, .detailDemo {
+        .listDemo, .detailDemo, .tabDemo {
             flex-direction: column;
         }
         .listItem {
             flex: 1;
             border-bottom: 1px #ddd solid;
+            text-align: left;
+            padding-left: 20px;
         }
+        .listItem1 {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            border-bottom: 1px #ddd solid;
+            padding: 0 5px;
+        } 
         .detail_row {
             display: flex;
             flex-direction: row;
@@ -53,10 +62,29 @@
         .detail_row_left {
             flex: 0 0 25%;
         }
+        .detail_row_left1 {
+            width: 120px;
+        }
         .detail_row_msg {
             flex-wrap: nowrap;
             overflow: hidden;
             margin-right: 20px;
+        }
+        .flex1 {
+            flex: 1;
+        }
+        .tabList {
+            display: flex;
+            flex-direction: row;
+            padding: 5px 0; 
+            background: #f5f5f5;
+        }
+        .tabItem {
+            flex: 1;
+            border-right: 1px #ccc solid;
+        }
+        .tabItem:last-child {
+            border: none;
         }
     </style>
 </head>
@@ -68,6 +96,26 @@
         <div class="item_base listItem">listItem content</div>
         <div class="item_base listItem">listItem content</div>
         <div class="item_base listItem">listItem content</div>
+    </div>
+
+    <div class="box_base listDemo">
+        <header>list Demo</header>
+        <div class="item_base listItem1">
+            <div class="list_item_left">标准房</div>
+            <div class="list_item_count">1</div>
+        </div>
+        <div class="item_base listItem1">
+            <div class="list_item_left">大床房</div>
+            <div class="list_item_count">0</div>
+        </div>
+        <div class="item_base listItem1">
+            <div class="list_item_left">六人床</div>
+            <div class="list_item_count">9</div>
+        </div>
+        <div class="item_base listItem1">
+            <div class="list_item_left">露台大床房</div>
+            <div class="list_item_count">1</div>
+        </div>
     </div>
 
     <div class="box_base detailDemo">
@@ -91,6 +139,35 @@
         <div class="item_base detail_row">
             <div class="detail_row_left">XX详情</div>
             <div class="detail_row_msg">XXXXXXXXXXXX</div>
+        </div>
+    </div>
+
+    <div class="box_base detailDemo">
+        <header>msg detail Demo1</header>
+        <div class="item_base detail_row">
+            <div class="detail_row_left1">XX详情1</div>
+            <div class="detail_row_msg">XXXXXXXXXXXX</div>
+        </div>
+        <div class="item_base detail_row">
+            <div class="detail_row_left1">XX详情1</div>
+            <div class="detail_row_msg flex1">XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</div>
+        </div>
+        <div class="item_base detail_row">
+            <div class="detail_row_left1">XX详情1</div>
+            <div class="detail_row_msg">XXXXXXXXXXXX</div>
+        </div>
+        <div class="item_base detail_row">
+            <div class="detail_row_left1">XX详情1</div>
+            <div class="detail_row_msg">XXXXXXXXXXXX</div>
+        </div>
+    </div>
+
+    <div class="box_base tabDemo">
+        <header>tabs</header>
+        <div class="tabList">
+            <div class="item_base tabItem">tab1</div>
+            <div class="item_base tabItem">tab2</div>
+            <div class="item_base tabItem noborder">tab3</div>
         </div>
     </div>
 </body>

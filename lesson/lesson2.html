@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>flex-wrap属性</title>
+</head>
+<style>
+    body {
+            background: #f5d5d5;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            align-items: center;
+            margin: 0;
+        }
+        header {
+            background: #f5f5f5;
+            color: #c56a6a;
+            font-size: 20px;
+            line-height: 40px;
+            width: 100%;
+            text-align: center;
+        }
+        .base_box {
+            background: #f5f5f5;
+            width: 50%;
+            margin: 20px;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            padding: 0 0 5px 0;
+            text-align: center;
+            line-height: 40px;
+        }
+        .flex_box {
+            display: flex;
+            flex-direction: column;
+        }
+        .item {
+            background: #c56a6a;
+            flex: 1;
+            color: #fff;
+            margin: 5px;
+            border-radius: 3px;
+            border: 2px #ccc solid;
+        }
+        .flex_row {
+            display: flex;
+            flex-direction: row;
+        }
+        .flex_column {
+            display: flex;
+            flex-direction: column;
+            height: 200px;
+        }
+        .nowrap {
+            flex-wrap: nowrap;
+        }
+        .wrap {
+            flex-wrap: wrap;
+        }
+        .wrap-reverse {
+            flex-wrap: wrap-reverse;
+        }
+        .msg{
+            background: #d47c7c;
+        }
+        .margin_top_200 {
+            margin-top: 200px;
+        }
+</style>
+<body>
+    <header>请缩小可视窗口查看效果更加明显！</header>
+    <div class="base_box flex_box">
+        <div class="item msg">主轴方向为row ; flex-wrap: nowrap</div>
+        <div class="flex_row nowrap">
+            <div class="item">item1</div>
+            <div class="item">item2</div>
+            <div class="item">item3</div>
+            <div class="item">item4</div>
+            <div class="item">item5</div>
+            <div class="item">item6</div>
+            <div class="item">item7</div>
+            <div class="item">item8</div>
+            <div class="item">item9</div>
+            <div class="item">item10</div>
+        </div>
+        <div class="item msg">项目再多，仍在一行显示(注意：item9 item10已经超出容器范围)</div>
+    </div>
+
+    <div class="base_box flex_box">
+        <div class="item msg">主轴方向为row ; flex-wrap: wrap</div>
+        <div class="flex_row wrap">
+            <div class="item">item1</div>
+            <div class="item">item2</div>
+            <div class="item">item3</div>
+            <div class="item">item4</div>
+            <div class="item">item5</div>
+            <div class="item">item6</div>
+            <div class="item">item7</div>
+            <div class="item">item8</div>
+            <div class="item">item9</div>
+            <div class="item">item10</div>
+        </div>
+        <div class="item msg">项目多，换行显示(注意：item9 item10换行显示)</div>
+    </div>
+    <div class="base_box flex_box">
+        <div class="item msg">主轴方向为row ; flex-wrap: wrap-reverse</div>
+        <div class="flex_row wrap-reverse">
+            <div class="item">item1</div>
+            <div class="item">item2</div>
+            <div class="item">item3</div>
+            <div class="item">item4</div>
+            <div class="item">item5</div>
+            <div class="item">item6</div>
+            <div class="item">item7</div>
+            <div class="item">item8</div>
+            <div class="item">item9</div>
+            <div class="item">item10</div>
+        </div>
+        <div class="item msg">注意与wrap区别：项目第一行在下方，交叉轴方向上逆序</div>
+    </div>
+
+    <div class="base_box flex_box">
+        <div class="item msg">主轴方向为column ; flex-wrap: nowrap</div>
+        <div class="flex_column nowrap">
+            <div class="item">item1</div>
+            <div class="item">item2</div>
+            <div class="item">item3</div>
+            <div class="item">item4</div>
+            <div class="item">item5</div>
+            <div class="item">item6</div>
+        </div>
+        <div class="item msg">项目再多，仍在一行显示(注意：item4 5 6已经超出容器范围)</div>
+    </div>
+
+    <div class="base_box flex_box margin_top_200">
+        <div class="item msg">主轴方向为column ; flex-wrap: wrap</div>
+        <div class="flex_column wrap">
+            <div class="item">item1</div>
+            <div class="item">item2</div>
+            <div class="item">item3</div>
+            <div class="item">item4</div>
+            <div class="item">item5</div>
+            <div class="item">item6</div>
+            <div class="item">item7</div>
+        </div>
+        <div class="item msg">项目多，换行显示(注意：item4 5 6 7换行显示)</div>
+    </div>
+
+    <div class="base_box flex_box">
+        <div class="item msg">主轴方向为column ; flex-wrap: wrap-reverse</div>
+        <div class="flex_column wrap-reverse">
+            <div class="item">item1</div>
+            <div class="item">item2</div>
+            <div class="item">item3</div>
+            <div class="item">item4</div>
+            <div class="item">item5</div>
+            <div class="item">item6</div>
+            <div class="item">item7</div>
+        </div>
+        <div class="item msg">注意与wrap的区别：第一列在右侧,交叉轴方向上逆序</div>
+    </div>
+</body>
+</html>

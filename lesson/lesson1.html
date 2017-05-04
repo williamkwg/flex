@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>flex-direction属性</title>
+</head>
+<style>
+    body {
+            background: #f5d5d5;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: center;
+        }
+        .base_box {
+            background: #f5f5f5;
+            width: 70%;
+            margin: 20px;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            padding: 0 0 5px 0;
+            text-align: center;
+            line-height: 40px;
+        }
+        .flex_box {
+            display: flex;
+            flex-direction: row; /*缺省值*/
+        }
+        .flex_direction_row_reverse {
+            flex-direction: row-reverse;
+        }
+        .flex_direction_column {
+            flex-direction: column;
+        }
+        .flex_direction_column_reverse {
+            flex-direction: column-reverse;
+        }
+        .item {
+            background: #c56a6a;
+            flex: 1;
+            color: #fff;
+            margin: 5px;
+            border-radius: 3px;
+            border: 2px #ccc solid;
+        }
+        .msg-title {
+            line-height: 50px;
+            height: 30px;
+            padding: 0 15px;
+        }
+        .width30 {
+            width: 30%;
+        }
+        .margin_top30 {
+            margin-top: -30px;
+        }
+        .margin_bottom30 {
+            margin-bottom: -35px;
+            font-size: 25px;
+        }
+</style>
+<body>
+    <div class="base_box flex_box">
+        <div class="msg-title">row:</div>
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">---></div>
+    </div>
+    <div class="base_box flex_box flex_direction_row_reverse">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item"><---</div>
+        <div class="msg-title">row-reverse:</div>
+    </div>
+    <div class="base_box flex_box flex_direction_column width30">
+        <div class="msg-title">column:</div>
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">
+            <div>|</div>
+            <div class="margin_top30">V</div>
+        </div>
+    </div>
+
+    <div class="base_box flex_box flex_direction_column_reverse width30">
+        
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">
+            <div class="margin_bottom30">^</div>
+            <div>|</div>
+        </div>
+        <div class="msg-title">column-reverse:</div>
+    </div>
+</body>
+</html>

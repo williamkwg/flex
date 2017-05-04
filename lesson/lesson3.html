@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>justify-content属性</title>
+</head>
+<style>
+    body {
+            background: #f5d5d5;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            align-items: center;
+            margin: 0;
+        }
+        .base_box {
+            background: #f5f5f5;
+            width: 50%;
+            margin: 20px;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            padding: 5px 0;
+            text-align: center;
+            line-height: 40px;
+
+        }
+        .flex_box {
+            display: flex;
+            flex-direction: column;
+        }
+        .item {
+            background: #c56a6a;
+            color: #fff;
+            border-radius: 3px;
+            border: 2px #ccc solid;
+        }
+        .width40 {
+            width: 40px;
+        }
+        .flex_row {
+            display: flex;
+            flex-direction: row;
+        }
+        .flex_column {
+            display: flex;
+            flex-direction: column;
+            height: 200px;
+        }
+        .flex-start {
+            justify-content: flex-start;
+        }
+        .flex-end {
+            justify-content: flex-end;
+        }
+        .flex-center {
+            justify-content: center;
+        }
+        .space-between {
+            justify-content: space-between;
+        }
+        .space-around {
+            justify-content: space-around;
+        }
+</style>
+<body>
+    <!--主轴方向为row-->
+    <div class="base_box flex_box">
+        <div class="item msg">主轴方向为row ; justify-content: flex-start</div>
+        <div class="flex_row flex-start">
+            <div class="item width40">A</div>
+            <div class="item width40">B</div>
+            <div class="item width40">C</div>
+            <div class="item width40">D</div>
+            <div class="item width40">E</div>
+            <div class="item width40">F</div>
+            <div class="item width40">G</div>
+        </div>
+        <div class="item msg">项目以主轴线起点对齐(左边顶点A)</div>
+    </div>
+
+    <div class="base_box flex_box">
+        <div class="item msg">主轴方向为row ; justify-content: flex-end</div>
+        <div class="flex_row flex-end">
+            <div class="item width40">A</div>
+            <div class="item width40">B</div>
+            <div class="item width40">C</div>
+            <div class="item width40">D</div>
+            <div class="item width40">E</div>
+            <div class="item width40">F</div>
+            <div class="item width40">G</div>
+        </div>
+        <div class="item msg">项目以主轴线终点对齐(右边顶点G)</div>
+    </div>
+
+    <div class="base_box flex_box">
+        <div class="item msg">主轴方向为row ; justify-content: center</div>
+        <div class="flex_row flex-center">
+            <div class="item width40">A</div>
+            <div class="item width40">B</div>
+            <div class="item width40">C</div>
+            <div class="item width40">D</div>
+            <div class="item width40">E</div>
+            <div class="item width40">F</div>
+            <div class="item width40">G</div>
+        </div>
+        <div class="item msg">项目在主轴线上居中对齐(中点D)</div>
+    </div>
+
+    <div class="base_box flex_box">
+        <div class="item msg">主轴方向为row ; justify-content: space-between</div>
+        <div class="flex_row space-between">
+            <div class="item width40">A</div>
+            <div class="item width40">B</div>
+            <div class="item width40">C</div>
+            <div class="item width40">D</div>
+            <div class="item width40">E</div>
+            <div class="item width40">F</div>
+            <div class="item width40">G</div>
+        </div>
+        <div class="item msg">项目在主轴线上两端对齐(A G紧靠两端)</div>
+    </div>
+
+    <div class="base_box flex_box">
+        <div class="item msg">主轴方向为row ; justify-content: space-around</div>
+        <div class="flex_row space-around">
+            <div class="item width40">A</div>
+            <div class="item width40">B</div>
+            <div class="item width40">C</div>
+            <div class="item width40">D</div>
+            <div class="item width40">E</div>
+            <div class="item width40">F</div>
+            <div class="item width40">G</div>
+        </div>
+        <div class="item msg">注意：与space-between的区别是 项目在主轴线上均匀分布(A G两侧有等距留白)</div>
+    </div>
+
+    <!--主轴方向为 column-->
+    <div class="base_box flex_box">
+        <div class="item msg">主轴方向为column; justify-content: flex-start</div>
+        <div class="flex_column flex-start">
+            <div class="item">A</div>
+            <div class="item">B</div>
+            <div class="item">C</div>
+        </div>
+        <div class="item msg">项目以主轴线起点对齐(上边顶点A)</div>
+    </div>
+
+    <div class="base_box flex_box">
+        <div class="item msg">主轴方向为column; justify-content: flex-end</div>
+        <div class="flex_column flex-end">
+            <div class="item">A</div>
+            <div class="item">B</div>
+            <div class="item">C</div>
+        </div>
+        <div class="item msg">项目以主轴线终点对齐(下边顶点C)</div>
+    </div>
+
+    <div class="base_box flex_box">
+        <div class="item msg">主轴方向为column; justify-content: center</div>
+        <div class="flex_column flex-center">
+            <div class="item">A</div>
+            <div class="item">B</div>
+            <div class="item">C</div>
+        </div>
+        <div class="item msg">项目在主轴线上居中对齐(中点B)</div>
+    </div>
+
+    <div class="base_box flex_box">
+        <div class="item msg">主轴方向为column; justify-content: space-between</div>
+        <div class="flex_column space-between">
+            <div class="item">A</div>
+            <div class="item">B</div>
+            <div class="item">C</div>
+        </div>
+        <div class="item msg">项目在主轴线上两端对齐(A C紧靠两端)</div>
+    </div>
+
+    <div class="base_box flex_box">
+        <div class="item msg">主轴方向为column; justify-content: space-around</div>
+        <div class="flex_column space-around">
+            <div class="item">A</div>
+            <div class="item">B</div>
+            <div class="item">C</div>
+        </div>
+        <div class="item msg">项目在主轴线上均匀分布(A C两边留有等距留白)</div>
+    </div>
+</body>
+</html>
