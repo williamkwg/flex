@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>麻将饼</title>
+    <style>
+        body{
+            background: #000;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .cookie_base {
+            border-radius: 50%;
+            background: #07965b;
+            box-shadow: 1px 1px 3px #000;
+        }
+        .mahjong_box {
+            width: 150px;
+            height: 200px;
+            border: 2px solid #07965b;
+            border-radius: 10px;
+            box-shadow: 3px 3px 8px #13ca21;
+            background: #fff;
+            margin: 20px;
+        }
+        .one_cookie_box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .one_cookie {
+            width: 90px;
+            height: 90px;
+        }
+        .two_cookie_box {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .two_cookie {
+            width: 70px;
+            height: 70px;
+        }
+        .three_cookie_box {
+            display: flex;
+            justify-content: space-around;
+        }
+        .three_left {
+            align-self: flex-start;
+            margin-top: 15px;
+            margin-right: -20px;
+        }
+        .three_center {
+            align-self: center;
+        }
+        .three_right {
+            align-self: flex-end;
+            margin-bottom: 15px;
+            margin-left: -20px;
+        }
+        .three_cookie {
+            width: 50px;
+            height: 50px;
+        }
+        .small_cookie {
+            width: 40px;
+            height: 40px;
+        }
+        .smaller_cookie {
+            width: 35px;
+            height: 35px;
+        }
+        .four_cookie_box, .five_cookie_box, .six_cookie_box {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+        .four_top, .four_bottom, .five_top, .five_bottom, .six_top, .six_bottom, .six_center {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .five_center {
+            align-self: center;
+        }
+        .seven_cookie_box {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+        .seven_top {
+            display: flex;
+            flex-direction: column;
+        }
+        .seven_bottom_item_box {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+        .seven_item_left {
+            align-self: flex-start;
+            margin-left: 20px;
+        }
+        .seven_item_center {
+            align-self: center;
+        }
+        .seven_item_right {
+            align-self: flex-end;
+            margin-right: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!--一饼-->
+    <div class="mahjong_box one_cookie_box">
+        <div class="one_cookie cookie_base"></div>
+    </div>
+    <!--二饼-->
+    <div class="mahjong_box two_cookie_box">
+        <div class="two_cookie cookie_base"></div>
+        <div class="two_cookie cookie_base"></div>
+    </div>
+    <!--三饼-->
+    <div class="mahjong_box three_cookie_box">
+        <div class="three_cookie cookie_base three_left"></div>
+        <div class="three_cookie cookie_base three_center"></div>
+        <div class="three_cookie cookie_base three_right"></div>
+    </div>
+    <!--四饼-->
+    <div class="mahjong_box four_cookie_box">
+        <div class="four_top">
+            <div class="small_cookie cookie_base"></div>
+            <div class="small_cookie cookie_base"></div>
+        </div>
+        <div class="four_bottom">
+            <div class="small_cookie cookie_base"></div>
+            <div class="small_cookie cookie_base"></div>
+        </div>
+    </div>
+    <!--五饼-->
+    <div class="mahjong_box five_cookie_box">
+        <div class="five_top">
+            <div class="small_cookie cookie_base"></div>
+            <div class="small_cookie cookie_base"></div>
+        </div>
+        <div class="small_cookie cookie_base five_center"></div>
+        <div class="five_bottom">
+            <div class="small_cookie cookie_base"></div>
+            <div class="small_cookie cookie_base"></div>
+        </div>
+    </div>
+    <!--六饼-->
+    <div class="mahjong_box six_cookie_box">
+        <div class="six_top">
+            <div class="small_cookie cookie_base"></div>
+            <div class="small_cookie cookie_base"></div>
+        </div>
+        <div class="six_center">
+            <div class="small_cookie cookie_base"></div>
+            <div class="small_cookie cookie_base"></div>
+        </div>
+        <div class="six_bottom">
+            <div class="small_cookie cookie_base"></div>
+            <div class="small_cookie cookie_base"></div>
+        </div>
+    </div>
+    <!--七饼-->
+    <div class="mahjong_box seven_cookie_box">
+        <div class="seven_top">
+            <div class="smaller_cookie cookie_base seven_item_left"></div>
+            <div class="smaller_cookie cookie_base seven_item_center"></div>
+            <div class="smaller_cookie cookie_base seven_item_right"></div>
+        </div>
+        <div class="seven_bottom_item_box">
+            <div class="smaller_cookie cookie_base"></div>
+            <div class="smaller_cookie cookie_base"></div>
+        </div>
+        <div class="seven_bottom_item_box">
+            <div class="smaller_cookie cookie_base"></div>
+            <div class="smaller_cookie cookie_base"></div>
+        </div>
+    </div>
+    <!--八饼-->
+    <div class="mahjong_box six_cookie_box">
+        <div class="six_top">
+            <div class="small_cookie cookie_base"></div>
+            <div class="small_cookie cookie_base"></div>
+        </div>
+        <div class="six_center">
+            <div class="small_cookie cookie_base"></div>
+            <div class="small_cookie cookie_base"></div>
+        </div>
+        <div class="six_bottom">
+            <div class="small_cookie cookie_base"></div>
+            <div class="small_cookie cookie_base"></div>
+        </div>
+        <div class="six_bottom">
+            <div class="small_cookie cookie_base"></div>
+            <div class="small_cookie cookie_base"></div>
+        </div>
+    </div>
+    <!--九饼-->
+    <div class="mahjong_box six_cookie_box">
+        <div class="six_top">
+            <div class="small_cookie cookie_base"></div>
+            <div class="small_cookie cookie_base"></div>
+            <div class="small_cookie cookie_base"></div>
+        </div>
+        <div class="six_center">
+            <div class="small_cookie cookie_base"></div>
+            <div class="small_cookie cookie_base"></div>
+            <div class="small_cookie cookie_base"></div>
+        </div>
+        <div class="six_bottom">
+            <div class="small_cookie cookie_base"></div>
+            <div class="small_cookie cookie_base"></div>
+            <div class="small_cookie cookie_base"></div>
+        </div>
+    </div>
+</body>
+</html>
