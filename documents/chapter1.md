@@ -22,11 +22,11 @@ flex是Flexible Box的简称，指`弹性布局`其实flex也只是一种布局�
  * [关于flex的W3C规范](http://dev.w3.org/csswg/css-flexbox-1/)
  * [浏览器兼容性问题](http://caniuse.com/#feat=flexbox)
 
- > ####总结如下：   
+ > #### 总结如下：   
  > IE10+ 完全支持 IE10需要`-ms-`前缀  
  > Android 4.3以下 需要 `-webkit-` 前缀
- > Safari8 以下需要 `-webkit` 前缀
- > IOS8.3 以下 需要`-webkit` 前缀
+ > Safari8 以下需要 `-webkit-` 前缀
+ > IOS8.3 以下 需要`-webkit-` 前缀
  
  所以flex兼容性写法也很简单，加上 *浏览器前缀* 即可。  
  

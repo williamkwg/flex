@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>align-content js 示例</title>
+    <link rel="stylesheet" href="../styles/common.css">
+    <style>
+        .container {
+            width: 70%;
+            background: #c0efef;
+            border: 2px #234 solid;
+            margin: 10px 0;
+            display: flex;
+            flex-direction: row;
+            padding: 20px;
+        }
+        .left, .right {
+            flex: 1;
+            padding: 20px;
+            border: 1px #444 solid;
+        }
+        .right {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+        .css_style {
+            line-height: 30px;
+            height: 30px;
+            border-radius: 3px;
+            padding-left: 5px;
+            border: 1px #ccc solid;
+            background: #fff;
+            margin: 2px;
+        }
+        .size40 {
+            width: 40px;
+            font-size: 20px;
+        }
+        .size60 {
+            width: 60px;
+            font-size: 28px;
+        }
+        .size80 {
+            width: 80px;
+            font-size: 36px;
+        }
+        .size120 {
+            width: 120px;
+            font-size: 12px;
+        }
+        .box {
+            width: 500px;
+            height: 400px;
+            flex-wrap: wrap;
+        }
+    </style>
+</head>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script>
+    $(function() {
+        
+        $(".directions").click(function() {
+            $(".js_result").css({
+                flexDirection: $(this).val()
+            });
+            $("#result_css").html($(this).val());
+        });
+        $(".align-content").click(function() {
+            $(".js_result").css({
+                alignContent: $(this).val()
+            });
+            $("#result_css1").html($(this).val());
+        });
+        $(".directions").eq(0).click();
+        $(".align-content").eq(0).click();
+    });
+</script>
+<body>
+    <div class="container">
+        <div class="left">
+            <h4>css属性切换区域</h4>
+            <div>
+                <h5>flex-direction：</h5>
+                <div>
+                    <input type="radio" class="directions" name="flex-direction" value="initial"/>
+                    <span>initial</span>
+                </div>
+                <div>
+                    <input type="radio" class="directions" name="flex-direction" value="row" />
+                    <span>row</span>
+                </div>
+                <div>
+                    <input type="radio" class="directions" name="flex-direction" value="column"/>
+                    <span>column</span>
+                </div>
+                <div>
+                    <input type="radio" class="directions" name="flex-direction" value="row-reverse" />
+                    <span>row-reverse</span>
+                </div>
+                <div>
+                    <input type="radio" class="directions" name="flex-direction" value="column-reverse"/>
+                    <span>column-reverse</span>
+                </div>
+            </div>
+            <div>
+                <h5>align-content: </h5>
+                <div>
+                    <input type="radio" class="align-content" name="align-items" value="initial"/>
+                    <span>initial</span>
+                </div>
+                <div>
+                    <input type="radio" class="align-content" name="align-items" value="flex-start" />
+                    <span>flex-start</span>
+                </div>
+                <div>
+                    <input type="radio" class="align-content" name="align-items" value="flex-end"/>
+                    <span>flex-end</span>
+                </div>
+                <div>
+                    <input type="radio" class="align-content" name="align-items" value="center"/>
+                    <span>center</span>
+                </div>
+                <div>
+                    <input type="radio" class="align-content" name="align-items" value="space-between"/>
+                    <span>space-between</span>
+                </div>
+                <div>
+                    <input type="radio" class="align-content" name="align-items" value="space-around"/>
+                    <span>space-around</span>
+                </div>
+                <div>
+                    <input type="radio" class="align-content" name="align-items" value="stretch"/>
+                    <span>stretch</span>
+                </div>
+            </div>
+        </div>
+        <div class="right">
+            <div>
+                <h5>结果：</h5>
+                <div class="js_result base_box flex_box box">
+                    <div class="item size40">1</div>
+                    <div class="item size80">2</div>
+                    <div class="item size120">3</div>
+                    <div class="item">4</div>
+                    <div class="item size60">5</div>
+                    <div class="item size40">6</div>
+                    <div class="item size80">7</div>
+                    <div class="item size120">8</div>
+                    <div class="item">9</div>
+                    <div class="item size60">10</div>
+                    <div class="item size40">11</div>
+                    <div class="item size80">12</div>
+                    <div class="item size120">13</div>
+                    <div class="item">14</div>
+                    <div class="item size60">15</div>
+                    <div class="item size40">16</div>
+                    <div class="item size80">17</div>
+                    <div class="item size120">18</div>
+                    <div class="item">19</div>
+                    <div class="item size60">20</div>
+                </div>
+            </div>
+            
+            <div>
+                <h5>css样式表</h5>
+                <div class="css_style">
+                    <span>flex-direction:</span>
+                    <strong id="result_css"><strong/>
+                </div>
+                <div class="css_style">
+                    <span>align-content:</span>
+                    <strong id="result_css1"><strong/>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

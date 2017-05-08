@@ -1,14 +1,14 @@
-##flex基本语法##
-####1.指定flex布局   
+## flex基本语法——容器属性 ##
+#### 1.指定flex布局   
 > 语法：`display: flex;`  
 	 
-####2.flex布局中的概念词   
+#### 2.flex布局中的概念词   
 
 * 容器：凡是设置了`display: flex`的元素都叫做flex容器
 * 项目：凡是flex容器里的成员都叫flex item(项目)
 * 主轴：flex容器默认存在2根轴，即主轴以及交叉轴，`flex-direaction`属性指定主轴的方向，交叉轴(辅轴)总是与主轴垂直相交。
 
-####3.flex容器的属性  
+#### 3.flex容器的属性  
 前面我们已经知道如何将元素设置为容器了，flex容器具有6个属性。
 > * flex-direction: 决定容器主轴方向;
 > * flex-wrap: 决定项目在容器中是否自动换行;
@@ -48,7 +48,7 @@
 ##### 3.3 justify-content属性  
 > 语法：`justify-content: flex-start | flex-end | center | space-between | space-around;`  
 
-该属性决定了项目在主轴方向上的对齐方式，flex-direction可以取以下4个值。  
+该属性决定了项目在主轴方向上的对齐方式，flex-direction可以取以下5个值。  
 > * flex-start: 缺省值，表示各个项目以主轴的起点处对齐;   
 > * flex-end: 表示表示各个项目以主轴的终点处对齐;  
 > * center: 表示各个项目在主轴线上居中对齐;  
@@ -57,11 +57,27 @@
 
 详情可查看 [justify-content 示例代码](../lesson/lesson3.html)， 效果如下图：
  
-
 ![flex-direction 属性示例效果图](../images/justify-content1.png)
 ![flex-direction 属性示例效果图](../images/justify-content2.png)
 ![flex-direction 属性示例效果图](../images/justify-content3.png)
 ![flex-direction 属性示例效果图](../images/justify-content4.png)
+
+##### 3.3 align-items属性  
+> 语法：`align-items: flex-start | flex-end | center | baseline | stretch;`  
+
+该属性决定了项目在交叉轴方向上的对齐方式，align-items可以取以下5个值。  
+> * flex-start: 表示各个项目以交叉轴的起点处对齐;   
+> * flex-end: 表示表示各个项目以交叉轴的终点处对齐;  
+> * center: 表示各个项目在辅轴线上居中对齐;  
+> * baseline: 表示各个项目在交叉轴上以第一行文字的基线对齐 ==> 各个项目第一行文本的baseline在一条线上; 
+> * stretch: 缺省值, 表示如果项目在交叉轴上未设置固定大小，则该项目占满交叉轴空间; 
+
+详情可查看 [align-items 示例代码](../lesson/lesson4.html)， 效果如下图：
+ 
+![align-items 属性示例效果图](../images/align-items1.png)
+![align-items 属性示例效果图](../images/align-items2.png)
+
+
 
 
 

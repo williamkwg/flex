@@ -1,0 +1,25 @@
+body {
+    background: #f5d5d5;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+}
+.base_box {
+    background: #f5f5f5;
+    margin: 20px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    padding: 5px 0;
+    text-align: center;
+}
+.flex_box {
+    display: flex;
+}
+.item {
+    background: #c56a6a;
+    color: #fff;
+    border-radius: 3px;
+    border: 2px #ccc solid;
+}

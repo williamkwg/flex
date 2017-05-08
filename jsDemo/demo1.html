@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>flex-direction js 示例</title>
+    <link rel="stylesheet" href="../styles/common.css">
+    <style>
+        .container {
+            width: 70%;
+            background: #c0efef;
+            border: 2px #234 solid;
+            margin: 10px 0;
+            display: flex;
+            flex-direction: row;
+            padding: 20px;
+        }
+        .left, .right {
+            flex: 1;
+            padding: 20px;
+            border: 1px #444 solid;
+        }
+        .flex1 {
+            flex: 1;
+        }
+        .right {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+        .css_style {
+            line-height: 30px;
+            height: 30px;
+            border-radius: 3px;
+            padding-left: 5px;
+            border: 1px #ccc solid;
+            background: #fff;
+        }
+        
+    </style>
+</head>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script>
+    $(function() {
+        
+        $("input:radio").click(function() {
+            $(".js_result").css({
+                flexDirection: $(this).val()
+            });
+            $("#result_css").html($(this).val());
+        });
+        $("input:radio").eq(0).click();
+    });
+</script>
+<body>
+    <div class="container">
+        <div class="left">
+            <h4>css属性切换区域</h4>
+            <div>
+                <h5>flex-direction：</h5>
+                <div>
+                    <input type="radio" name="flex-prop" value="initial"/>
+                    <span>initial</span>
+                </div>
+                <div>
+                    <input type="radio" name="flex-prop" value="row" />
+                    <span>row</span>
+                </div>
+                <div>
+                    <input type="radio" name="flex-prop" value="column"/>
+                    <span>column</span>
+                </div>
+                <div>
+                    <input type="radio" name="flex-prop" value="row-reverse" />
+                    <span>row-reverse</span>
+                </div>
+                <div>
+                    <input type="radio" name="flex-prop" value="column-reverse"/>
+                    <span>column-reverse</span>
+                </div>
+            </div>
+        </div>
+        <div class="right">
+            <div>
+                <h5>结果：</h5>
+                <div class="js_result base_box flex_box">
+                    <div class="item flex1">1</div>
+                    <div class="item flex1">2</div>
+                    <div class="item flex1">3</div>
+                    <div class="item flex1">4</div>
+                </div>
+            </div>
+            
+            <div>
+                <h5>css样式表</h5>
+                <div class="css_style">
+                    <span>flex-direction:</span>
+                    <strong id="result_css"><strong/>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

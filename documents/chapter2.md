@@ -1,4 +1,4 @@
-##flex布局与传统布局##
+## flex布局与传统布局 ##
 
 * css中最重点的内容莫过于layout, css布局基于[盒模型](http://baike.baidu.com/link?url=pHH5DTPKpgl0NlSCstelGkFUNoSV_j7MuOjXhTMc_-xla04PWz3IqeHLtS0GbpEk3vn4oICmkfWxdmO8hhOvTdOra-OyVgEQjXzdiJLYo08BtKhwGqZ6_BHNBmfJSONP)；
 * 布局有文档流布局、定位布局、浮动布局、表格布局、flex布局5种；
