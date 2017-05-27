@@ -4,9 +4,26 @@
 	 
 #### 2.flex布局中的概念词   
 
-* 容器：凡是设置了`display: flex`的元素都叫做flex容器
-* 项目：凡是flex容器里的成员都叫flex item(项目)
-* 主轴：flex容器默认存在2根轴，即主轴以及交叉轴，`flex-direaction`属性指定主轴的方向，交叉轴(辅轴)总是与主轴垂直相交。
+一图胜万语，我们先看一下flex容器的图例。
+![flex容器图解](../images/flex-container.png)
+从图中可以看出，flex布局中涉及以下几个概念：
+
+* 容器(flex-container)：凡是设置了`display: flex`的元素都叫做flex容器
+* 项目(flex item)：凡是flex容器里的成员都叫flex item(项目)
+* 主轴(main axis)：flex容器默认存在2根轴，即主轴以及交叉轴，`flex-direaction`属性指定主轴的方向，交叉轴(辅轴)总是与主轴垂直相交。
+* 交叉轴(cross axis): 始终与主轴垂直，需要注意的是交叉轴的方向始终向右或者向下。
+* 容器尺寸(container size)：由容器在主轴方向上的长度(mian size) 与 容器在交叉轴方向上的长度(cross size) 共同决定的。
+* 项目尺寸(item size)：由项目在主轴方向上占据的空间大小 与 项目在交叉轴方向上占据的空间大小 共同决定。
+* 主轴起点(mian start)：主轴的起始点。
+* 主轴终点(mian end): 主轴的终点。
+* 交叉轴起始点(cross start): 交叉轴的起始点。
+* 交叉轴终点(cross end): 交叉轴的终点。
+
+注意：交叉轴方向总是向右或者向下，主轴方向对交叉轴影响如下：
+> 主轴方向为水平方向，即 `flex-direction: row | row-reverse`时, 交叉轴方向始终向下；  
+> 主轴方向为垂直方向，即 `flex-direction: column | colume-reverse`时， 交叉轴方向始终向右；  
+
+下面，我们一起来看flex容器拥有那些布局属性。
 
 #### 3.flex容器的属性  
 前面我们已经知道如何将元素设置为容器了，flex容器具有6个属性。
@@ -17,19 +34,20 @@
 > * align-content: 决定了沿主轴排列的项目集合在交叉轴方向上的排列方式;
 > * flex-flow: flex-direction属性以及flex-wrap属性的简写方式;
 
-##### 3.1 flex-direction属性  
-> 语法：`flex-direction: row | row-reverse | column | column-reverse;`  
+这里简单介绍了flex container的布局属性，下面章节让我们对各个属性进行剖析！
 
-该属性决定了容器的主轴的方向，flex-direction可以取以下4个值。  
-> * row: 缺省值，表示主轴为水平方向，起点在左;   
-> * row-reverse: 表示主轴方向为水平方向，起点在右;  
-> * column: 表示主轴方向为垂直方向，起点在上;  
-> * column-reverse: 表示主轴方向为垂直方向，起点在下;  
 
-详情可查看 [flex-direction 示例代码](../lesson/lesson1.html)， 效果如下图：
- 
 
-![flex-direction 属性示例效果图](../images/flex-direction属性.png)
+
+
+
+
+
+
+
+
+
+
 
 ##### 3.2 flex-wrap属性  
 > 语法：`flex-wrap: wrap | nowrap | wrap-reverse;`  

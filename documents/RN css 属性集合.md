@@ -5,6 +5,7 @@ react native中可以使用的css属性为 web css属性的子集，对css进行
 
 ```css
 position: absolute | relative;
+zIndex: <number>;
 top: <number>;  
 left: <number>;  
 right: <number>;  
@@ -111,5 +112,7 @@ shadowOffset: <number>;
 shadowOpacity: <number>;
 shadowRadius: <number>;
 ```
+
+> 注：随着RN版本的更新，各个属性持续更新ing!
 	
 
